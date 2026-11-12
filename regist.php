@@ -32,7 +32,6 @@
                     <select name="role" required>
                         <option value=""></option>
                         <option value="Administrator">Administrator</option>
-                        <option value="Petugas">Petugas</option>
                     </select>
                 </td>
             </tr>
