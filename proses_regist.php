@@ -1,13 +1,21 @@
 <?php
-include 'koneksi.php';
-$username=$_POST['username'];
-$password=$_POST['password'];
-$role=$_POST['role'];
+session_start();
+if(!isset($_SESSION['username']) || $_SESSION['role'] != 'Administrator'){
+    header("location:login.php");
+    exit();
+}
 
-$query=mysqli_query($koneksi,"Insert Into users(Username,Password,Role) Values ('$username','$password','$role')");
+include 'koneksi.php';
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+$role = $_POST['role'];
+
+$query = mysqli_query($koneksi, "INSERT INTO users (Username, Password, Role) VALUES ('$username', '$password', '$role')");
 
 if($query){
-    header('registrasi berhasil');
-}else{
-    header('registrasi gagal');
+    header("location:home.php");
+} else {
+    header("location:regist.php?pesan=gagal");
 }
+?>

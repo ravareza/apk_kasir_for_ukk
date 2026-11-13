@@ -1,19 +1,28 @@
+<?php
+session_start();
+// Mencegah petugas atau user biasa mengakses halaman ini lewat URL langsung
+if(!isset($_SESSION['username']) || $_SESSION['role'] != 'Administrator'){
+    header("location:login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registrasi - Aplikasi Kasir</title>
+    <title>Registrasi Akun - Aplikasi Kasir</title>
 </head>
 <body>
-    <a href="index.php"><-back</a>
-    <h2>Registrasi Akun Baru</h2>
+    <h2>Tambah Akun Pengguna Baru</h2>
+    <a href="home.php">Kembali ke Beranda</a>
+    <br><br>
+    
     <?php 
-    if(isset($_GET['pesan'])){
-        if($_GET['pesan']=="gagal"){
-            echo "Registrasi gagal, coba lagi!";
-        }
+    if(isset($_GET['pesan']) && $_GET['pesan']=="gagal"){
+        echo "<div style='color:red;'>Gagal mendaftarkan akun!</div>";
     }
     ?>
-    <form action="proses_register.php" method="POST">
+    
+    <form action="proses_regist.php" method="POST">
         <table>
             <tr>
                 <td>Username</td>
@@ -30,19 +39,15 @@
                 <td>:</td>
                 <td>
                     <select name="role" required>
-                        <option value=""></option>
                         <option value="Administrator">Administrator</option>
+                        <option value="Petugas">Petugas</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
-                <td>
-                    <input type="submit" value="Register"> 
-                    <h2></h2>
-                    <a href="login.php">Sudah punya akun? Login</a>
-                </td>
+                <td><input type="submit" value="Simpan Akun"></td>
             </tr>
         </table>
     </form>

@@ -1,23 +1,19 @@
+<?php
+session_start();
+if(isset($_SESSION['username'])){
+    header("location:home.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aplikasi Kasir</title>
 </head>
 <body>
-    <header>
-        <h2>Selamat datang diaplikasi kasir</h2>
-    </header>
-    <div>
-    <h1>Silahkan Pilih Login atau Registrasi</h1>
-    <h4>Pilih menu dibawah untuk lanjut ke aplikasi</h4>
-    <ul>
-        <li><a href="login.php">Login</a></li>   
-        <li><a href="regist.php">Registrasi</a></li>
-    </ul>
-</div>
-    </main>
-    
+        <h2>Selamat datang di aplikasi kasir</h2>
+        <h3>Silakan Masuk ke Aplikasi</h3>
+        <p>Klik tombol di bawah ini untuk melanjutkan</p>
+            <a href="login.php">Login</a>
 </body>
 </html>
