@@ -8,7 +8,7 @@ include 'koneksi.php';
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<head><link rel="stylesheet" href="style.css">
     <title>Transaksi Kasir</title>
     <link rel="stylesheet" href="style.css">
 </head>

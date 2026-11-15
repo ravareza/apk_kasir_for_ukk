@@ -7,7 +7,7 @@ if(isset($_SESSION['username'])){
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<head><link rel="stylesheet" href="style.css">
     <title>Aplikasi Kasir</title>
 </head>
 <body>

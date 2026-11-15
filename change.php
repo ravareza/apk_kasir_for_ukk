@@ -10,7 +10,7 @@ while($d = mysqli_fetch_array($data)){
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<head><link rel="stylesheet" href="style.css">
     <title>Edit Produk - Aplikasi Kasir</title>
 </head>
 <body>

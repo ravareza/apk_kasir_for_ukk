@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Login - Aplikasi Kasir</title>
-</head>
+</head><link rel="stylesheet" href="style.css">
 <body>
     <h2>Login Aplikasi Kasir</h2>
     <?php 

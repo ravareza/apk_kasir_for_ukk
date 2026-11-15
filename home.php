@@ -8,7 +8,7 @@ $role = $_SESSION['role'];
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<head><link rel="stylesheet" href="style.css">
     <title>Dashboard - Aplikasi Kasir</title>
 </head>
 <body>

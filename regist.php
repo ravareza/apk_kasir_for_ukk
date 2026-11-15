@@ -8,7 +8,7 @@ if(!isset($_SESSION['username']) || $_SESSION['role'] != 'Administrator'){
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<head><link rel="stylesheet" href="style.css">
     <title>Registrasi Akun - Aplikasi Kasir</title>
 </head>
 <body>
