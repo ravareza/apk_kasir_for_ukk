@@ -37,4 +37,3 @@ apk_kasir_for_ukk/
 ├── proses_transaksi.php    # Proses simpan transaksi & potong stok
 ├── koneksi.php             # Konfigurasi koneksi database MySQL
 └── style.css               # File desain tampilan (CSS)
-
